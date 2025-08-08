@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Portfolio - Your Name</title>
+  <style>
+    /* Reset & Basics */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Courier New', monospace;
+      color: #00ff99;
+      background: #000;
+      overflow-x: hidden;
+    }
+
+    /* Matrix Background */
+    #matrix {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: rgba(0, 0, 0, 0.6);
+      border-bottom: 2px solid #00ff99;
+      box-shadow: 0 0 20px #00ff99;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      text-shadow: 0 0 10px #00ff99;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #80ffc2;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 0.8rem;
+      border-bottom: 1px solid #00ff99;
+    }
+    nav a {
+      color: #00ff99;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 8px #00ff99;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      margin-top: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #00ff99;
+    }
+    h2 {
+      border-bottom: 1px solid #00ff99;
+      padding-bottom: 0.3rem;
+      color: #00ff99;
+    }
+
+    .skills, .projects, .certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #00ff99;
+      box-shadow: 0 0 10px #00ff99;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #00ffaa;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #80ffc2;
+    }
+
+    a.button {
+      display: inline-block;
+      background-color: #00ff99;
+      color: black;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    a.button:hover {
+      background-color: #80ffc2;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #80ffc2;
+      margin-top: 2rem;
+      border-top: 1px solid #00ff99;
+      background: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body>
+
+<!-- Matrix Canvas -->
+<canvas id="matrix"></canvas>
+
+<header>
+  <h1>Your Name</h1>
+  <p>Cybersecurity Student | Ethical Hacker | SOC Analyst in Training</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate cybersecurity student specializing in network security, penetration testing, and digital forensics.
+    I thrive in creating secure systems and identifying vulnerabilities before attackers do.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card"><h3>🔒 Penetration Testing</h3><p>Metasploit, Burp Suite, Kali Linux</p></div>
+    <div class="card"><h3>🌐 Network Security</h3><p>Firewalls, Snort, Wireshark</p></div>
+    <div class="card"><h3>☁ Cloud Security</h3><p>AWS, Azure Security Fundamentals</p></div>
+    <div class="card"><h3>💻 Programming</h3><p>Python, Bash, JavaScript</p></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Vulnerability Lab</h3>
+      <p>Virtual lab for ethical hacking using Kali Linux & vulnerable VMs.</p>
+      <a href="#" class="button">View Project</a>
+    </div>
+    <div class="card">
+      <h3>Snort IDS Deployment</h3>
+      <p>Configured Snort on pfSense to detect malicious network traffic.</p>
+      <a href="#" class="button">View Project</a>
+    </div>
+    <div class="card">
+      <h3>Phishing Simulation</h3>
+      <p>Created a phishing awareness campaign to educate users.</p>
+      <a href="#" class="button">View Project</a>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <div class="certifications">
+    <div class="card"><h3>CompTIA Security+</h3><p>In Progress – Expected Dec 2025</p></div>
+    <div class="card"><h3>HTB SOC Analyst</h3><p>Completed July 2025</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+  <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+  <p>GitHub: <a href="#">github.com/yourusername</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Your Name | Cybersecurity Portfolio</p>
+</footer>
+
+<!-- Matrix Effect Script -->
+<script>
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
+
+const chars = "01";
+const fontSize = 16;
+const columns = canvas.width / fontSize;
+
+const drops = Array(Math.floor(columns)).fill(1);
+
+function draw() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = "#00ff99";
+  ctx.font = fontSize + "px monospace";
+
+  for (let i = 0; i < drops.length; i++) {
+    const text = chars.charAt(Math.floor(Math.random() * chars.length));
+    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+      drops[i] = 0;
+    }
+    drops[i]++;
+  }
+}
+
+setInterval(draw, 35);
+
+window.addEventListener("resize", () => {
+  canvas.height = window.innerHeight;
+  canvas.width = window.innerWidth;
+});
+</script>
+
+</body>
+</html>
